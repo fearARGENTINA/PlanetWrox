@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PlanetWrox", "PlanetWrox\", "{0727EE53-58E4-471D-92A4-65A53D548418}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51225"
+		Debug.AspNetCompiler.PhysicalPath = "PlanetWrox\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51225\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51225"
+		Release.AspNetCompiler.PhysicalPath = "PlanetWrox\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51225\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51225"
+		SlnRelativePath = "PlanetWrox\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0727EE53-58E4-471D-92A4-65A53D548418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0727EE53-58E4-471D-92A4-65A53D548418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C155E78C-346D-49CC-9737-8B3B97E8035E}
+	EndGlobalSection
+EndGlobal
