@@ -10,6 +10,9 @@
       .auto-style1 {
          width: 100%;
       }
+      .auto-style2 {
+         height: 23px;
+      }
    </style>
 </head>
 <body>
@@ -37,8 +40,8 @@
                  </td>
               </tr>
               <tr>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
+                 <td class="auto-style2">Link</td>
+                 <td class="auto-style2"><a href="../Default.aspx">Go to the homepage of Planet Wrox</a></td>
               </tr>
            </table>
         </div>
