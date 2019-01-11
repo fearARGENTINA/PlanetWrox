@@ -12,7 +12,25 @@
         <div>
            <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="True" Text="Show panel" OnCheckedChanged="CheckBox1_CheckedChanged"/>
            <asp:Panel ID="Panel1" runat="server" Visible="False">
-              I am visible now</asp:Panel>
+              <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="1" OnFinishButtonClick="Wizard1_FinishButtonClick" Width="500px">
+                 <WizardSteps>
+                    <asp:WizardStep runat="server" title="About You">
+                       <asp:Label ID="Label1" runat="server" Text="Type your name"></asp:Label>
+                       <asp:TextBox ID="YourName" runat="server"></asp:TextBox>
+                    </asp:WizardStep>
+                    <asp:WizardStep runat="server" StepType="Finish" title="Favorite Language">
+                       <asp:DropDownList ID="FavoriteLanguage" runat="server">
+                          <asp:ListItem>C#</asp:ListItem>
+                          <asp:ListItem>Visual Basic</asp:ListItem>
+                          <asp:ListItem>CSS</asp:ListItem>
+                       </asp:DropDownList>
+                    </asp:WizardStep>
+                    <asp:WizardStep runat="server" StepType="Complete" Title="Ready">
+                       <asp:Label ID="Result" runat="server" Text="Label"></asp:Label>
+                    </asp:WizardStep>
+                 </WizardSteps>
+              </asp:Wizard>
+           </asp:Panel>
         </div>
     </form>
 </body>

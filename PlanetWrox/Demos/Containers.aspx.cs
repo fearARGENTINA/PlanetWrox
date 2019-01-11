@@ -16,4 +16,10 @@ public partial class Demos_Containers : System.Web.UI.Page
    {
       Panel1.Visible = CheckBox1.Checked;
    }
+
+   protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
+   {
+      Result.Text = "Your name is " + YourName.Text;
+      Result.Text += "<br />Your favorite language is " + FavoriteLanguage.SelectedValue;
+   }
 }
