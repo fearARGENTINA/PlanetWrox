@@ -4,12 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Drawing;
 
-public partial class Demos_CodeBehind : System.Web.UI.Page
+public partial class Demos_ControlsDemo : System.Web.UI.Page
 {
    protected void Page_Load(object sender, EventArgs e)
    {
-      Label1.Text = "Hello World; the time is now " + DateTime.Now.ToString();
+
+   }
+
+   protected void SubmitButton_Click(object sender, EventArgs e)
+   {
+      Result.Text = "Your name is " + YourName.Text;
    }
 }
