@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
 
-public partial class Demos_CodeBehind : System.Web.UI.Page
+public partial class Demos_CodeBehind : BasePage
 {
    protected void Page_Load(object sender, EventArgs e)
    {
