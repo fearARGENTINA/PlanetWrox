@@ -93,9 +93,11 @@ nav
   */
   background-image: url(Images/MenuBackground.jpg);
   width: 827px;
-  height: 36px;
+  height: 20px;
   padding-top: 7px;
   padding-left: 17px;
+  margin: 0;
+  padding-right: 0;
 }
 
   nav a
