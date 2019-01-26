@@ -26,6 +26,18 @@ public partial class MasterPages_Frontend : System.Web.UI.MasterPage
             }
          }
       }
+
+      switch (Page.Theme.ToLower())
+      {
+         case "darkgrey":
+            Menu1.Visible = false;
+            TreeView1.Visible = true;
+            break;
+         default:
+            Menu1.Visible = true;
+            TreeView1.Visible = false;
+            break;
+      }
    }
 
    protected void ThemeList_SelectedIndexChanged(object sender, EventArgs e)

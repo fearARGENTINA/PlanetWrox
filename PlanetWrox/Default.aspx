@@ -10,6 +10,6 @@
    <p class="Introduction">
       Ut enim ad minim veniam,<a href="Default.aspx"> quis nostrud </a>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
    </p>
-   <p>You can <a href="Login.aspx">log in</a> here</p>
+   <p>You can <a href="Login">log in</a> here</p>
 </asp:Content>
 

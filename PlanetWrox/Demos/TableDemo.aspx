@@ -41,7 +41,7 @@
               </tr>
               <tr>
                  <td class="auto-style2">Link</td>
-                 <td class="auto-style2"><a href="../Default.aspx">Go to the homepage of Planet Wrox</a></td>
+                 <td class="auto-style2"><a href="../Default">Go to the homepage of Planet Wrox</a></td>
               </tr>
            </table>
         </div>
