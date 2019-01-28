@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="MasterPages_Frontend" %>
 
-
-<%@ Register src="~/Controls/Banner.ascx" tagname="Banner" tagprefix="uc1" %>
 <!DOCTYPE html>
 
 <html>
@@ -40,7 +38,7 @@
             <br />
             <br />
             <br />
-            <uc1:Banner ID="Banner1" runat="server" />
+            <Wrox:Banner ID="Banner1" runat="server" />
          </aside>
          <footer>Footer Goes Here</footer>
       </div>
