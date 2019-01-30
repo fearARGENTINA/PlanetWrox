@@ -22,7 +22,7 @@
    }
 </style>
 
-<table class="auto-style1">
+<table class="auto-style1" runat="server" id="FormTable">
    <tr>
       <td colspan="3">
          <h4>Use the form below to get in touch with us</h4>
@@ -85,16 +85,17 @@
    <tr>
       <td>&nbsp;</td>
       <td>
-         <asp:Button ID="SendButton" runat="server" Text="Send" />
+         <asp:Button ID="SendButton" runat="server" Text="Send" OnClick="SendButton_Click" />
       </td>
       <td>&nbsp;</td>
    </tr>
    <tr>
       <td colspan="3">
-         <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="ErrorMessage" HeaderText="Please correct the following errors: " ShowMessageBox="True" ShowSummary="False" />
+         <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="ErrorMessage" HeaderText="Please correct the following errors: " />
       </td>
    </tr>
 </table>
+<asp:Label ID="Message" Text="Message Sent" runat="server" Visible="False" />
 
 <p class="ErrorMessage">
 </p>
