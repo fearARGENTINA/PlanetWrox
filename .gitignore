@@ -261,4 +261,4 @@ __pycache__/
 *.pyc
 
 # Configuracion del sitio web con informacion sensible
-PlanetWrox\Web.config
+PlanetWrox/Web.config
