@@ -35,10 +35,7 @@
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="cpClientScript">
    <script>
-      $(function () {
-         // Matches just the text box
-         $(':checkbox').attr('checked', true);
-      });
+      alert($('#DemoTable td:contains("Row 1 Cell 2") ').prev()[0].innerHTML);
    </script>
 </asp:Content>
 

@@ -45,6 +45,7 @@ public partial class Controls_ContactForm : System.Web.UI.UserControl
          SmtpClient mySmtpClient = new SmtpClient();
          mySmtpClient.Send(myMessage);
          Message.Visible = true;
+         MessageSentPara.Visible = true;
          FormTable.Visible = false;
       }
    }
