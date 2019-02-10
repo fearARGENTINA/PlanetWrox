@@ -7,8 +7,15 @@ using System.Web.UI.WebControls;
 
 public partial class Reviews_AllByGenre : BasePage
 {
-   protected void Page_Load(object sender, EventArgs e)
-   {
-
-   }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        using (PlanetWroxEntities myEntities = new PlanetWroxEntities())
+        {
+            var allGenres = from genre in myEntities.Genres.Include("Reviews")
+                            orderby genre.Name
+                            select new { genre.Name, genre.Reviews };
+            Repeater1.DataSource = allGenres.ToList();
+            Repeater1.DataBind();
+        }
+    }
 }

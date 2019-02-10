@@ -9,6 +9,14 @@ public partial class Reviews_All : BasePage
 {
    protected void Page_Load(object sender, EventArgs e)
    {
-
-   }
+        using (PlanetWroxEntities myEntities = new PlanetWroxEntities())
+        {
+            var authorizedReviews = from review in myEntities.Reviews
+                                    where review.Authorized == true
+                                    orderby review.CreateDateTime descending
+                                    select review;
+            GridView1.DataSource = authorizedReviews.ToList();
+            GridView1.DataBind();
+        }
+    }
 }
