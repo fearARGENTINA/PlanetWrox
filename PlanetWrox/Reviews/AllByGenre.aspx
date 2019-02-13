@@ -8,7 +8,7 @@
             <h3>
                 <asp:Literal ID="Literal1" runat="server" Text='<%# Eval("Name") %>'></asp:Literal>
             </h3>
-            <asp:BulletedList ID="ReviewList" runat="server" DataSource='<%# Eval("Reviews")%>' DataTextField=" Title"></asp:BulletedList>
+            <asp:BulletedList ID="ReviewList" runat="server" DataSource='<%# Eval("Reviews")%>' DataTextField="Title"></asp:BulletedList>
         </ItemTemplate>
     </asp:Repeater>
 </asp:Content>
