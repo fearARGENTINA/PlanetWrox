@@ -8,6 +8,7 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
