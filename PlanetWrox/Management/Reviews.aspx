@@ -8,7 +8,7 @@
     </asp:DropDownList>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" DataKeyNames="Id">
         <Columns>
-            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReview.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
+            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReviewHandCoded.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
             <asp:TemplateField HeaderText="Authorized" SortExpression="Authorized">
                 <EditItemTemplate>
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Authorized") %>'></asp:TextBox>
@@ -21,7 +21,7 @@
             <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" />
         </Columns>
     </asp:GridView>
-    <a href="AddEditReview.aspx">Insert New Review:</a><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" SelectCommand="SELECT [Id], [Title], [Authorized], [CreateDateTime] FROM [Review] WHERE ([GenreId] = @GenreId)" DeleteCommand="DELETE FROM [Review] WHERE [Id] = @original_Id" InsertCommand="INSERT INTO [Review] ([Title], [Authorized], [CreateDateTime]) VALUES (@Title, @Authorized, @CreateDateTime)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Review] SET [Title] = @Title, [Authorized] = @Authorized, [CreateDateTime] = @CreateDateTime WHERE [Id] = @original_Id">
+    <a href="AddEditReviewHandCoded.aspx">Insert New Review:</a><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" SelectCommand="SELECT [Id], [Title], [Authorized], [CreateDateTime] FROM [Review] WHERE ([GenreId] = @GenreId)" DeleteCommand="DELETE FROM [Review] WHERE [Id] = @original_Id" InsertCommand="INSERT INTO [Review] ([Title], [Authorized], [CreateDateTime]) VALUES (@Title, @Authorized, @CreateDateTime)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Review] SET [Title] = @Title, [Authorized] = @Authorized, [CreateDateTime] = @CreateDateTime WHERE [Id] = @original_Id">
         <DeleteParameters>
             <asp:Parameter Name="original_Id" Type="Int32" />
         </DeleteParameters>
