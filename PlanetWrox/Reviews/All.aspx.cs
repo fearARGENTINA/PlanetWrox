@@ -15,8 +15,8 @@ public partial class Reviews_All : BasePage
                                     where review.Authorized == true
                                     orderby review.CreateDateTime descending
                                     select review;
-            GridView1.DataSource = authorizedReviews.ToList();
-            GridView1.DataBind();
+            Repeater1.DataSource = authorizedReviews.ToList();
+            Repeater1.DataBind();
         }
     }
 }
