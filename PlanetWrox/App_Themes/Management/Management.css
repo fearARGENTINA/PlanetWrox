@@ -1,48 +1,44 @@
-*
-{
-  font-family: Verdana, Arial, Sans-Serif;
+* {
+    font-family: Verdana, Arial, Sans-Serif;
 }
 
-body
-{
-  font-size: 80%;
+body {
+    font-size: 80%;
 }
 
-.GridView, .GridView a
-{
-  color: #000;
-  text-decoration: none;
+.GridView, .GridView a {
+    color: #000;
+    text-decoration: none;
 }
 
-.GridViewHeaderStyle th, .GridViewPagerStyle
-{
-  background-color: #BCD1FE;
-  background-repeat: no-repeat;
-  background-position: 0 5px;
-  text-align: left;
+.GridViewHeaderStyle th, .GridViewPagerStyle {
+    background-color: #BCD1FE;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    text-align: left;
 }
 
-.GridViewAlternatingRowStyle
-{
-  background-color: #e1e1e1;
+.GridViewAlternatingRowStyle {
+    background-color: #e1e1e1;
 }
 
-.GridViewSortedAscendingHeaderStyle, .GridViewSortedDescendingHeaderStyle
-{
-  padding-left: 20px;
+.GridViewSortedAscendingHeaderStyle, .GridViewSortedDescendingHeaderStyle {
+    padding-left: 20px;
 }
 
-.GridViewSortedAscendingHeaderStyle
-{
-  background-image: url(Images/SortAscending.png);
+.GridViewSortedAscendingHeaderStyle {
+    background-image: url(Images/SortAscending.png);
 }
 
-.GridViewSortedDescendingHeaderStyle
-{
-  background-image: url(Images/SortDescending.png);
+.GridViewSortedDescendingHeaderStyle {
+    background-image: url(Images/SortDescending.png);
 }
 
-a.aspNetDisabled
-{
-  color: #CCC;
+a.aspNetDisabled {
+    color: #CCC;
+}
+
+.ErrorMessage {
+    color: red;
+    font-weight: bold;
 }
