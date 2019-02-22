@@ -4,51 +4,58 @@
 
 <html>
 <head runat="server">
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <title></title>
-   <asp:ContentPlaceHolder ID="head" runat="server">
-   </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
-   <form id="form1" runat="server">
-      <asp:ScriptManager ID="ScriptManager1" runat="server">
-         <Scripts>
-            <asp:ScriptReference Name="jquery" />
-            <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />
-         </Scripts>
-      </asp:ScriptManager>
-      <div id="PageWrapper">
-         <header><a href="/"></a></header>
-         <nav>
-            <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
-            <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="False" ExpandDepth="FullyExpand">
-               <LevelStyles>
-                  <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
-               </LevelStyles>
-            </asp:TreeView>
-            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
-         </nav>
-         <section id="MainContent">
-            <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
-            <br />
-            <br />
-            <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
-            </asp:ContentPlaceHolder>
-         </section>
-         <aside id="Sidebar">
-            Select a theme<br />
-            <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
-               <asp:ListItem>Monochrome</asp:ListItem>
-               <asp:ListItem>DarkGrey</asp:ListItem>
-            </asp:DropDownList>
-            <br />
-            <br />
-            <br />
-            <Wrox:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
-         </aside>
-         <footer>Footer Goes Here</footer>
-      </div>
-      <asp:ContentPlaceHolder ID="cpClientScript" runat="server"></asp:ContentPlaceHolder>
-   </form>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="PageWrapper">
+            <header><a href="/"></a></header>
+            <nav>
+                <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="False" ExpandDepth="FullyExpand">
+                    <LevelStyles>
+                        <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
+                    </LevelStyles>
+                </asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+            </nav>
+            <section id="MainContent">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+                <br />
+                <br />
+                <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+            <aside id="Sidebar">
+                Select a theme<br />
+                <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+                    <asp:ListItem>Monochrome</asp:ListItem>
+                    <asp:ListItem>DarkGrey</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <br />
+                <Wrox:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
+            </aside>
+            <footer>
+                <asp:LoginName ID="LoginName1" runat="server" FormatString=" Logged in as {0}" />
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        (<asp:LoginStatus ID="LoginStatus1" runat="server" />)
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </footer>
+        </div>
+        <asp:ContentPlaceHolder ID="cpClientScript" runat="server"></asp:ContentPlaceHolder>
+    </form>
 </body>
 </html>
