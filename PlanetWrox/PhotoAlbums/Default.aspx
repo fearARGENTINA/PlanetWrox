@@ -8,7 +8,7 @@
             <asp:DropDownList ID="PhotoAlbumList" runat="server" AutoPostBack="True" DataTextField="Name" DataValueField="Id" OnSelectedIndexChanged="PhotoAlbumList_SelectedIndexChanged" SelectMethod="PhotoAlbumList_GetData">
             </asp:DropDownList>
             <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id"
-                ItemType="Picture" SelectMethod="ListView1_GetData">
+                ItemType="Picture" SelectMethod="ListView1_GetData" OnDataBound="ListView1_DataBound">
                 <EmptyDataTemplate>
                     No pictures found for this photo album.
                 </EmptyDataTemplate>
@@ -33,6 +33,9 @@
                     </div>
                 </LayoutTemplate>
             </asp:ListView>
+            <br />
+            <br />
+            <asp:HyperLink ID="EditLink" Text="Edit Photo Album" runat="server" />
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

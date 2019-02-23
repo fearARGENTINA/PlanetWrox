@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.ModelBinding;
 using System.IO;
+using System.Web.Security;
 
 public partial class _ManagePhotoAlbum : BasePage
 {
@@ -69,6 +70,17 @@ public partial class _ManagePhotoAlbum : BasePage
                            select p).Single();
             myEntities.Pictures.Remove(picture);
             myEntities.SaveChanges();
+        }
+    }
+
+    protected void ListView1_ItemCreated(object sender, ListViewItemEventArgs e)
+    {
+        switch (e.Item.ItemType)
+        {
+            case ListViewItemType.DataItem:
+                Button deleteButton = (Button)e.Item.FindControl("DeleteButton");
+                deleteButton.Visible = Roles.IsUserInRole("Managers");
+                break;
         }
     }
 }

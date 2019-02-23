@@ -34,4 +34,18 @@ public partial class PhotoAlbums_Default : BasePage
                orderby p.Id
                select p;
     }
+
+    protected void ListView1_DataBound(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(PhotoAlbumList.SelectedValue))
+        {
+            EditLink.NavigateUrl = string.Format(
+            "~/ManagePhotoAlbum.aspx?PhotoAlbumId={0}", PhotoAlbumList.SelectedValue);
+            EditLink.Visible = true;
+        }
+        else
+        {
+            EditLink.Visible = false;
+        }
+    }
 }

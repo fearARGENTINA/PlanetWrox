@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="Server">
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id"
         InsertItemPosition="LastItem" ItemType="Picture"
-        SelectMethod="ListView1_GetData" InsertMethod="ListView1_InsertItem" DeleteMethod="ListView1_DeleteItem">
+        SelectMethod="ListView1_GetData" InsertMethod="ListView1_InsertItem" DeleteMethod="ListView1_DeleteItem" OnItemCreated="ListView1_ItemCreated">
         <InsertItemTemplate>
             <li>Description:
                 <asp:TextBox ID="Description" runat="server"
